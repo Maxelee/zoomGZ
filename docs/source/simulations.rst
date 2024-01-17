@@ -16,11 +16,15 @@ All particles within :math:`6\times R_{200}` of the chosen halo are identified a
 .. _sampling:
 Parameter space sampling
 ------------
-We follow the novel parameter space sampling scheme, CARPool, which allows for reduced variance emulation of quantities given a sparse sampling of data in a high dimensional parameter space. CARPoolGP requires two types of samples: *Base* samples, which are broadly distributed throughout the parameter space, and *Surrogate* samples, which occupy predefined locations in parameter space (which we call parameter islands) but which are correlated to a base sample. In the context of CAMELS-zoomGZ - every base simulation of a halo at some parameter space location contains a surrogate simulation of the **exact same halo** but located at a different point in parameter space. This implies there are 384 unique halos simulated in this suite, each of which contains a partner simulation. 
+We follow the novel parameter space sampling scheme, `CARPoolGP <https://github.com/Maxelee/CARPoolGP>`_, which allows for reduced variance emulation of quantities given a sparse sampling of data in a high dimensional parameter space. CARPoolGP requires two types of samples: *Base* samples, which are broadly distributed throughout the parameter space, and *Surrogate* samples, which occupy predefined locations in parameter space (which we call parameter islands) but which are correlated to a base sample. Then, in the context of CAMELS-zoomGZ - every base simulation of a halo at some parameter space location contains a surrogate simulation of the **exact same halo** but located at a different point in parameter space. This implies there are 384 unique halos simulated in this suite, each containing a partner simulation. 
 
 .. _AL:
 Active learning sampling
 ------------
+CARPoolGP allows for an active learning parameter space sampling strategy, which seeks to sample parameter space at the locations that provide the most significant predictive variance reduction (see figure below)
+.. image:: path/filename.png
+  :width: 400
+  :alt: Alternative text
 
 .. _characteristics:
 Simulation characteristics
