@@ -1,6 +1,7 @@
 Simulations
 =====
 A complete description of CAMELS-zoomGZ and its creation can be found in M. E. Lee, S. Genel, B. Wandelt, et al. 2024: https://arxiv.org/abs/....
+
 .. _overview:
 Overview of CAMELS-zoomGZ
 ------------
@@ -16,15 +17,30 @@ All particles within :math:`6\times R_{200}` of the chosen halo are identified a
 .. _sampling:
 Parameter space sampling
 ------------
-We follow the novel parameter space sampling scheme, `CARPoolGP <https://github.com/Maxelee/CARPoolGP>`_, which allows for reduced variance emulation of quantities given a sparse sampling of data in a high dimensional parameter space. CARPoolGP requires two types of samples: *Base* samples, which are broadly distributed throughout the parameter space, and *Surrogate* samples, which occupy predefined locations in parameter space (which we call parameter islands) but which are correlated to a base sample. Then, in the context of CAMELS-zoomGZ - every base simulation of a halo at some parameter space location contains a surrogate simulation of the **exact same halo** but located at a different point in parameter space. This implies there are 384 unique halos simulated in this suite, each containing a partner simulation. 
+We follow the novel parameter space sampling scheme, `CARPoolGP <https://github.com/Maxelee/CARPoolGP>`_, which allows for reduced variance emulation of quantities given a sparse sampling of data in a high dimensional parameter space. CARPoolGP requires two types of samples: *Base* samples, which are broadly distributed throughout the parameter space, and *Surrogate* samples, which occupy predefined locations in parameter space (which we call parameter islands) but which are correlated to a base sample. Then, in the context of CAMELS-zoomGZ - every base simulation of a halo at some parameter space location contains a surrogate simulation of the **exact same halo** but located at a different point in parameter space. This implies there are 384 unique halos simulated in this suite, each containing a partner simulation. In CAMELS-zoomGZ, we use 128 parameter islands drawn from a sobol sequence over the 29-dimensional parameter space (28 astrophysical parameters + 1 mass parameter). 
 
 .. _AL:
 Active learning sampling
 ------------
-CARPoolGP allows for an active learning parameter space sampling strategy, which seeks to sample parameter space at the locations that provide the most significant predictive variance reduction (see figure below)
-.. image:: path/filename.png
+CARPoolGP allows for an active learning parameter space sampling strategy, which seeks to sample parameter space at the locations that provide the most significant predictive variance reduction (see figure below for a 1D toy example). This process occurs in stages, where first, a quantity is emulated, and the predictive error is evaluated, then a set of points throughout the parameter space are tested to see which points provide the most significant variance reduction. These parameter space locations and associated surrogate locations are then used to perform the next stage of samples.
+
+.. image:: ../AL.png
   :width: 400
-  :alt: Alternative text
+  :alt: Active learning example
+
+In CAMELS-zoomGZ, we adopt this approach, minimizing the variance on the integrated Compton Y parameter. We perform four stages of simulations:
+
++-----------------------+---------------+------------------------+
+|Stage                  |Number of base |Number of surrogate     |
++=======================+===============+========================+
+|1                      |128            |128                     |
++-----------------------+---------------+------------------------+
+|2                      |128            |128                     |
++-----------------------+---------------+------------------------+
+|3                      |64             |64                      |
++-----------------------+---------------+------------------------+
+|4                      |64             |64                      |
++-----------------------+---------------+------------------------+
 
 .. _characteristics:
 Simulation characteristics
