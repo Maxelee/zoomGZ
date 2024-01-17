@@ -28,19 +28,19 @@ CARPoolGP allows for an active learning parameter space sampling strategy, which
   :width: 1000
   :alt: Active learning example
 
-In CAMELS-zoomGZ, we adopt this approach, minimizing the variance on the integrated Compton Y parameter. We perform four stages of simulations:
+In CAMELS-zoomGZ, we adopt this approach, minimizing the variance on the integrated Compton Y parameter. We perform four stages of simulations, which can be found in the following directories:
 
-+-----------------------+---------------+---------------+------------------------+
-|Stage                  |Number of base |zoom numbers   |Number of surrogate     |
-+=======================+===============+===============+========================+
-|1                      |128            |zoom0-zoom128  |128                     |
-+-----------------------+---------------+---------------+------------------------+
-|2                      |128            |zoom256-zoom384|128                     |
-+-----------------------+---------------+---------------+------------------------+
-|3                      |64             |zoom512-zoom576|64                      |
-+-----------------------+---------------+---------------+------------------------+
-|4                      |64             |zoom640-zoom704|64                      |
-+-----------------------+---------------+---------------+------------------------+
++-----------------------+---------------+-----------------+------------------------+-----------------------+
+|Stage                  |Number of base |base dir numbers |Number of surrogate     | surrogate dir numbers |
++=======================+===============+=================+========================+=======================+
+|1                      |128            |zoom0-zoom128    |128                     |zoom128-zoom256        |
++-----------------------+---------------+-----------------+------------------------+-----------------------+
+|2                      |128            |zoom256-zoom384  |128                     |zoom384-zoom512        |
++-----------------------+---------------+-----------------+------------------------+-----------------------+
+|3                      |64             |zoom512-zoom576  |64                      |zoom576-zoom640        |
++-----------------------+---------------+-----------------+------------------------+-----------------------+
+|4                      |64             |zoom640-zoom704  |64                      |zoom704-zoom768        |
++-----------------------+---------------+-----------------+------------------------+-----------------------+
 
 .. _characteristics:
 Simulation characteristics
