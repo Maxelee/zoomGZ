@@ -1,13 +1,10 @@
-Welcome to Lumache's documentation!
+Welcome to CAMELS-zoomGZ documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**CAMELS-zoom(GroupZoom)** is a new "hump" of the CAMELS project <https://camels.readthedocs.io/en/latest/index.html>.
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+CAMELS-zoomGZ includes a set of 768 zoom-in simulations of massive halos, spanning 28 astrophysical and cosmological parameters in the IllustrisTNG parameter space. Unlike standard CAMELS sets, which sample parameter space using a Latin hypercube or Sobol sequence, CAMELS-zoomGZ uses a novel sampling and emulation method *CARPoolGP*. More information on CARPoolGP can be found here:...., and in our manuscript here: ...
+
 
 .. note::
 
@@ -15,8 +12,10 @@ how to :ref:`installation` the project.
 
 Contents
 --------
+See the :doc:`simulations` section for details about the suite, including the process for :doc:`access`. We include a brief tutorial for interacting with the simulation data in :doc:`zoomGZ-tutorial`.
 
 .. toctree::
 
-   usage
-   api
+   simulations
+   access
+   contact
