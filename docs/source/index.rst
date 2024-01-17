@@ -12,10 +12,11 @@ CAMELS-zoomGZ includes a set of 768 zoom-in simulations of massive halos, spanni
 
 Contents
 --------
-See the :doc:`simulations` section for details about the suite, including the process for :doc:`access`. We include a brief tutorial for interacting with the simulation data in :doc:`zoomGZ-tutorial`.
+See the :doc:`simulations` section for details about the suite, including the process for :doc:`access`. We include a brief tutorial for interacting with the simulation data in :doc:`tutorial`.
 
 .. toctree::
 
    simulations
    access
    contact
+   tutorial
