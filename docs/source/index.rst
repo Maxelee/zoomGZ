@@ -18,5 +18,6 @@ See the :doc:`simulations` section for details about the suite, including the pr
 
    simulations
    access
-   contact
    tutorial
+   contact
+   
