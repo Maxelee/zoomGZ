@@ -25,7 +25,7 @@ Active learning sampling
 CARPoolGP allows for an active learning parameter space sampling strategy, which seeks to sample parameter space at the locations that provide the most significant predictive variance reduction (see figure below for a 1D toy example). This process occurs in stages, where first, a quantity is emulated, and the predictive error is evaluated, then a set of points throughout the parameter space are tested to see which points provide the most significant variance reduction. These parameter space locations and associated surrogate locations are then used to perform the next stage of samples.
 
 .. image:: ../AL.png
-  :width: 400
+  :width: 1000
   :alt: Active learning example
 
 In CAMELS-zoomGZ, we adopt this approach, minimizing the variance on the integrated Compton Y parameter. We perform four stages of simulations:
