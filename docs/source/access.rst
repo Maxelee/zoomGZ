@@ -25,7 +25,8 @@ Users without a Flatiron Rusty computing account can work with the data through 
 The binder link can be found here: `Link to Binder <https://binder.flatironinstitute.org/>`_.
 
 .. warning::
-    Two important things need to be taken into account when using Binder. First, the Binder environment is ephemeral - after a few days of inactivity its contents are deleted, so one has to be vigilant about downloading any analysis results in time. Second, Binder is not designed to carry out long and heavy calculations. In this case we recommend the user to download the data and work with it locally.
+    Two important things need to be taken into account when using Binder. First, the Binder environment is ephemeral - after a few days of inactivity its contents are deleted, so one has to be vigilant
+    about downloading any analysis results in time. Second, Binder is not designed to carry out long and heavy calculations. In this case we recommend the user to download the data and work with it locally.
 
 
 
