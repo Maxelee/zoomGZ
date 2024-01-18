@@ -44,9 +44,9 @@ In CAMELS-zoomGZ, we adopt this approach, minimizing the variance on the integra
 |4                      |64             |zoom640-zoom704  |64                      |zoom704-zoom768        |
 +-----------------------+---------------+-----------------+------------------------+-----------------------+
 
-.. _characteristics:
-Simulation characteristics
-----------------
+.. .. _characteristics:
+.. Simulation characteristics
+.. ----------------
 
 
 
