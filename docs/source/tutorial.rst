@@ -1,3 +1,6 @@
+Tutorial
+=====
+
 .. container:: cell markdown
    :name: 73a68ba6-c222-4567-91a9-5e995c049ce9
 
@@ -16,7 +19,8 @@
       from astropy.constants import k_B, m_p,m_e, sigma_T, c
       import re
       import matplotlib.pyplot as plt
-
+      import warnings
+      warnings.filterwarnings("ignore")
 
       def sort_nicely(l):
           """ Sort the given list in the way that humans expect.
@@ -378,7 +382,7 @@
 
    .. container:: output display_data
 
-      .. image:: vertopal_824cf0fa86c4427798c9a7262321287d/147c5eb8f9db1509ada359a369cb4dcf4890b30c.png
+      .. image:: vertopal_525e7a9b263b46b2a692cbdc2e3dc059/147c5eb8f9db1509ada359a369cb4dcf4890b30c.png
 
 .. container:: cell markdown
    :name: 03e8969a-557c-4ac6-9eed-6e14dea063f3
@@ -416,21 +420,6 @@
    to much greater or smaller masses than listed in the file.
 
 .. container:: cell code
-   :name: 3c0ccdc9-8e94-482f-afc0-773495c28c3e
-
-   .. code:: python
-
-   .. container:: output execute_result
-
-      ::
-
-           ParamName  AbsMaxDiff  LogFlag  FiducialVal  MinVal  MaxVal  \
-         0      Mass        3.06        0            1     0.1    3.16   
-
-                                   Description  
-         0  Halo mass in units of 10^{14}M_sun  
-
-.. container:: cell code
    :name: c1abee92-fe5d-455b-8370-7c2a4a5459f4
 
    .. code:: python
@@ -448,31 +437,6 @@
    This data frame ``param_info`` holds the names, priors, fiducial and
    description
 
-.. container:: cell code
-   :name: cbb24421-c44d-4e54-94fb-ca52541dae46
-
-   .. code:: python
-
-      param_info.tail()
-
-   .. container:: output execute_result
-
-      ::
-
-                                ParamName  AbsMaxDiff  LogFlag  FiducialVal    MinVal  \
-         24       BlackHoleFeedbackFactor        4.00        1        0.100  0.025000   
-         25  BlackHoleRadiativeEfficiency        4.00        1        0.200  0.050000   
-         26               QuasarThreshold       31.60        1        0.002  0.000063   
-         27          QuasarThresholdPower        2.00        0        2.000  0.000000   
-         28                          Mass        3.06        0        1.000  0.100000   
-
-             MaxVal                                        Description  
-         24  0.4000            high-accretion mode feedback efficiency  
-         25  0.8000                            BH radiative efficiency  
-         26  0.0632  Eddington ratio for transition between BH feed...  
-         27  4.0000  power-law in Weinberger+ 2017 eq.5 - steepness...  
-         28  3.1600                 Halo mass in units of 10^{14}M_sun  
-
 .. container:: cell markdown
    :name: 6a4c9a11-0a3a-40a4-987b-aa5a42641b39
 
@@ -486,13 +450,6 @@
    .. code:: python
 
       params = pd.read_csv(params_path, index_col=0)
-
-.. container:: cell markdown
-   :name: 47cb0f3d-2929-4b47-a2da-efbc6ec07e9d
-
-   But we can extract the true masses from the hydro FOF catalog (there
-   are 768 simulations). Any mass that has a 0, is because the zoom is
-   not finished running!
 
 .. container:: cell code
    :name: ef0e65fd-e056-42e4-b30c-a53dc4a6831c
@@ -524,24 +481,11 @@
 
       _ = plt.hist(np.log10(params['Mass']), edgecolor='k', bins=np.arange(10, 16, 0.33))
       plt.xlabel('Log M')
-      plt.ylabel('N')
-
-   .. container:: output stream stderr
-
-      ::
-
-         /mnt/sw/nix/store/gpkc8q6zjnp3n3h3w9hbmbj6gjbxs85w-python-3.10.10-view/lib/python3.10/site-packages/pandas/core/arraylike.py:396: RuntimeWarning: divide by zero encountered in log10
-           result = getattr(ufunc, method)(*inputs, **kwargs)
-
-   .. container:: output execute_result
-
-      ::
-
-         Text(0, 0.5, 'N')
+      plt.ylabel('N');
 
    .. container:: output display_data
 
-      .. image:: vertopal_824cf0fa86c4427798c9a7262321287d/e5d333bccca686bbb9276dee6090500d0befa169.png
+      .. image:: vertopal_525e7a9b263b46b2a692cbdc2e3dc059/e5d333bccca686bbb9276dee6090500d0befa169.png
 
 .. container:: cell markdown
    :name: 4b681927-ee93-462a-a75a-5cca626c3f59
@@ -570,24 +514,11 @@
       axs[1].set_title('Surrogate Simulations')
       axs[0].set_xlabel('Log M')
       axs[1].set_xlabel('Log M')
-      axs[0].set_ylabel('N')
-
-   .. container:: output stream stderr
-
-      ::
-
-         /mnt/sw/nix/store/gpkc8q6zjnp3n3h3w9hbmbj6gjbxs85w-python-3.10.10-view/lib/python3.10/site-packages/pandas/core/arraylike.py:396: RuntimeWarning: divide by zero encountered in log10
-           result = getattr(ufunc, method)(*inputs, **kwargs)
-
-   .. container:: output execute_result
-
-      ::
-
-         Text(0, 0.5, 'N')
+      axs[0].set_ylabel('N');
 
    .. container:: output display_data
 
-      .. image:: vertopal_824cf0fa86c4427798c9a7262321287d/d4aa103a0c05f363d28b1e237d7f0d59db4e11c1.png
+      .. image:: vertopal_525e7a9b263b46b2a692cbdc2e3dc059/d4aa103a0c05f363d28b1e237d7f0d59db4e11c1.png
 
 .. container:: cell markdown
    :name: 4ffb91d3-0304-4e64-b7f4-4b8f05b65a79
@@ -653,17 +584,11 @@
       cb = fig.colorbar(im2, ax=[axs[0], axs[1]], orientation='vertical')
       cb.set_label('Log(T)')
       axs[0].set_title('Base halo')
-      axs[1].set_title('Surrogate halo')
-
-   .. container:: output execute_result
-
-      ::
-
-         Text(0.5, 1.0, 'Surrogate halo')
+      axs[1].set_title('Surrogate halo');
 
    .. container:: output display_data
 
-      .. image:: vertopal_824cf0fa86c4427798c9a7262321287d/f7c8bb0ad0cc90b1d6ae506378d4d8531e9c7cd0.png
+      .. image:: vertopal_525e7a9b263b46b2a692cbdc2e3dc059/f7c8bb0ad0cc90b1d6ae506378d4d8531e9c7cd0.png
 
 .. container:: cell markdown
    :name: 2ee624a0-42e0-4d97-af24-b68daa1aab07
