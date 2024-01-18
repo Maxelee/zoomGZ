@@ -4,7 +4,7 @@ Data Access
 We host our public data on the Flatiron Institute computer, Rusty. Here you can find all simulations, and their snapshots at redshifts 2, 1, 0.5, 0.25, and 0. If you want access to other redshifts for simulations please contact us!
 
 .. _rusty:
-zoomGZ on Rusty
+CAMELS-zoomGZ on Rusty
 ------------
 Users with a Flatiron Rusty computing account can find the hydrodynamical simulation data at:
 
@@ -18,7 +18,7 @@ The dark matter only analogs for the hydro simulations can be found at
 
 
 .. _binder:
-zoomGZ on Binder
+CAMELS-zoomGZ on Binder
 ----------------
 Users without a Flatiron Rusty computing account can work with the data through Binder, which is a system that allows access to the data for analysis and manipulation. More details on using Binder can be found here: `Flatiron Binder <https://wiki.flatironinstitute.org/Public/UsingFiBinder>`_. 
 
