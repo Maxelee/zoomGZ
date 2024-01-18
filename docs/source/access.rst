@@ -20,7 +20,7 @@ The dark matter only analogs for the hydro simulations can be found at
 .. _binder:
 zoomGZ on Binder
 ----------------
-Users without a Flatiron Rusty computing account can work with the data through Binder, which is a system that allows access to the data for analysis and manipulation. More details on using Binder can be found here: `Flatiron Binder <https://wiki.flatironinstitute.org/Public/UsingFiBinder>'_. 
+Users without a Flatiron Rusty computing account can work with the data through Binder, which is a system that allows access to the data for analysis and manipulation. More details on using Binder can be found here: `Flatiron Binder <https://wiki.flatironinstitute.org/Public/UsingFiBinder>`_. 
 
 The binder link can be found here: `Link to Binder <https://binder.flatironinstitute.org/>`_.
 
