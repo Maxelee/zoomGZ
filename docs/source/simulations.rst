@@ -14,7 +14,11 @@ At each parameter space location, we run three separate simulations: A parent si
 
 All particles within :math:`6\times R_{200}` of the chosen halo are identified and traced back to their locations in the initial conditions, where a bounding rectangular Lagrangian region is drawn to encapsulate all of the traced particles. The hydrodynamical zoom-in simulation is then run centered on the chosen halo, where the gas particles have :math:`M_{\rm gas} = 1.26\times 10^{7}\left(\Omega_b/0.049\right) \,h^{-1} M_\odot` and the high-resolution Lagrangian region contains dark matter particles with mass :math:`M_{\rm DM, High Res} = 6.49\times 10^{7}\left((\Omega_m - \Omega_b)/0.251\right) \,h^{-1} M_\odot`, matching the resolution of the flagship CAMELS boxes. For completeness, we perform associated dark matter-only zoom-in analogs to match the above using the same method and with the same resolution. 
 
-For each simulation, we output 91 snapshots between z=127 and z=0, though for minimizing disk usage, we only provide public access to snapshots at redshifts 2, 1, 0.5, 0.25, and 0. If you want to explore other redshifts, please :doc:`contact` us, and we can provide them. 
+For each simulation, we output 91 snapshots between z=127 and z=0. You can find the full list of redshifts and scale factors `here <https://github.com/franciscovillaescusa/CAMELS/edit/master/docs/source/description.rst>`_.
+
+.. Warning::
+
+   We keep snapshots at redshifts=2, 1, 0.5, 0.25, and 0 publicly available but have moved the rest to tape storage. If you need these, please `reach out to <camel.simulations@gmail.com>`_.
 
 .. _sampling:
 Parameter space sampling
