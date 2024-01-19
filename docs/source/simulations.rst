@@ -18,7 +18,7 @@ For each simulation, we output 91 snapshots between z=127 and z=0. You can find 
 
 .. Warning::
 
-   We keep snapshots at redshifts=2, 1, 0.5, 0.25, and 0 publicly available but have moved the rest to tape storage. If you need these, please `reach out to us <camel.simulations@gmail.com>`_.
+   We keep snapshots at redshifts=2, 1, 0.5, 0.25, and 0 publicly available but have moved the rest to tape storage. If you need these, please `reach out <camel.simulations@gmail.com>`_.
 
 .. _sampling:
 Parameter space sampling
