@@ -8,13 +8,16 @@ CAMELS-zoomGZ on Rusty
 ------------
 Users with a Flatiron Rusty computing account can find the hydrodynamical simulation data at:
 
-:code:`/mnt/ceph/users/camels/PUBLIC_RELEASE/IllustrisTNG/zoom/zoom/GZ28`
+:code:`/mnt/ceph/users/camels/PUBLIC_RELEASE/Sims/IllustrisTNG/zoom/GZ28`
 
-This directory also hosts the file listing each simulation's astrophysical and cosmological parameters, whether they are surrogate or base simulations, and the random seed used to generate the simulations. We further host a file detailing the parameter names, fiducial values, minimum and maximum values, and a brief description.
+This directory also hosts the file listing each simulation's astrophysical and cosmological parameters, whether they are surrogate or base simulations, and the random seed used to generate the simulations. We further host a file detailing the parameter names, fiducial values, minimum and maximum values, and a brief description. The FOF/subfind catalogs are located at:
+
+:code:`/mnt/ceph/users/camels/PUBLIC_RELEASE/FOF_Subfind/IllustrisTNG/zoom/GZ28`
 
 The dark matter only analogs for the hydro simulations can be found at
 
-:code:`/mnt/ceph/users/camels/PUBLIC_RELEASE/IllustrisTNG_DM/zoom/zoom/GZ28`
+:code:`/mnt/ceph/users/camels/PUBLIC_RELEASE/Sims/IllustrisTNG_DM/zoom/GZ28`
+:code:`/mnt/ceph/users/camels/PUBLIC_RELEASE/FOF_Subfind/IllustrisTNG_DM/zoom/GZ28`
 
 
 .. _binder:
@@ -22,7 +25,11 @@ CAMELS-zoomGZ on Binder
 ----------------
 Users without a Flatiron Rusty computing account can work with the data through Binder, which is a system that allows access to the data for analysis and manipulation. More details on using Binder can be found here: `Flatiron Binder <https://wiki.flatironinstitute.org/Public/UsingFiBinder>`_. 
 
-The binder link can be found here: `Link to Binder <https://binder.flatironinstitute.org/v2/user/sgenel/CAMELS_PUBLIC>`_.
+The binder link can be found here: `Link to Binder <https://binder.flatironinstitute.org/v2/user/sgenel/CAMELS_PUBLIC>`_. All you need to do is sign in with an email address, and you will gain access to a work environment that contains access to all CAMELS data including the zooms located at: 
+
+:code:`/data/Sims/IllustrisTNG/zoom/GZ28`
+and the FOF/Subfind catalogs at:
+:code:`/data/FOF_Subfind/IllustrisTNG/zoom/GZ28`
 
 .. warning::
     Two important things need to be taken into account when using Binder. First, the Binder environment is ephemeral - after a few days of inactivity, its contents are deleted, so one has to be vigilant
